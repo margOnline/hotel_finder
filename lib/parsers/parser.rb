@@ -50,6 +50,7 @@ class Parser
     hotel.rating = attributes["star_rating"]
     hotel.previous_price = attributes["former_price"]
     hotel.current_price = attributes["current_price"]
+    hotel.url = attributes["url"]
     hotel
   end
 

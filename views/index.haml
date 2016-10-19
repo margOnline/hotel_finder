@@ -5,22 +5,21 @@
 .strapline Top Destinations
 - @destinations.each do |country, value|
   - value.each do |city, hotels|
-    .accordion
-      %div
+    .panel
+      .panel-head
         %h4 #{city}, #{country}
         %p Over #{hotels.count} hotels
-      .accordion-content
+      .panel-content
         - hotels.each do |hotel|
-          %p
-            =hotel.name
+          .details
+            %a{href: hotel.url}
+              =hotel.name
+            .meta
+              %span.rating=hotel.rating
+              %span.text From    
+              - if hotel.previous_price
+                %span.prev-price &pound;#{hotel.previous_price}
+              %span.current-price &pound;#{hotel.current_price} 
+        %a{href: "#"} See all 898 hotels in London
 
-            %span.current-price &pound;#{hotel.current_price}    
-            - if hotel.previous_price
-              %span.prev-price &pound;#{hotel.previous_price}
-            %span.text From       
-            %span.rating
-              =hotel.rating
-
-        %p See all 898 hotels in London
-
-%a{href: "/"}See all our destinations
+%a{href: "/"}See all of our destination offers
