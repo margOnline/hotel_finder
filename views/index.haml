@@ -7,7 +7,7 @@
   - value.each do |city, hotels|
     .accordion
       %div
-        %h4 #{city}, #{hotels.first.state}, #{country}
+        %h4 #{city}, #{country}
         %p Over #{hotels.count} hotels
       .accordion-content
         - hotels.each do |hotel|

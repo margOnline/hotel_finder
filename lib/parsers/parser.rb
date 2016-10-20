@@ -12,55 +12,21 @@ class Parser
   def parse
     data = JSON.parse(File.read(filename))
     destinations = []
-    data["country"].each do |country, country_hash|
-      country_hash.each do |area, area_hash|
-        if area == "state"
-          area_hash.each do |state, state_hash|
-            state_hash.each do |city, city_hash|
-              city_hash.each do |city, hotels|
-                hotels.each do |hotel, attributes|
-                  hotel = Destination.new
-                  hotel.name = hotel
-                  hotel.city = city
-                  hotel.state = state
-                  hotel.country = country
-                  assign_attributes(hotel, attributes)
-                  destinations << hotel
-                end
-              end
-            end
-          end
-        else
-          area_hash.each do |city, hotels| 
-            hotels.each do |hotel, attributes|
-              hotel = Destination.new
-              hotel.name = hotel
-              hotel.city = city
-              hotel.country = country
-              assign_attributes(hotel, attributes)
-              destinations << hotel
-            end
+    data["country"].each do |key, value|
+      value.each do |k, v|
+        v.each do |city, hotels| 
+          hotels.each do |hotel, attributes|
+            dest = Destination.new
+            dest.name = hotel
+            dest.city = city
+            dest.country = key
+            assign_attributes(dest, attributes)
+            destinations << dest
           end
         end
       end
     end
     sort(destinations)
-  end
-
-  private
-  def parse_hash
-    
-  end
-
-  def parse_city
-    
-  end
-
-  def assign_attributes(hotel, attributes)
-    hotel.rating = attributes["star_rating"]
-    hotel.previous_price = attributes["former_price"]
-    hotel.current_price = attributes["current_price"]
-    hotel
   end
 
   def sort(array)
@@ -80,6 +46,11 @@ class Parser
     hash
   end
 
-  
+  def assign_attributes(hotel, attributes)
+    hotel.rating = attributes["star_rating"]
+    hotel.previous_price = attributes["former_price"]
+    hotel.current_price = attributes["current_price"]
+    hotel
+  end
 
 end
