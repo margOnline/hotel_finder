@@ -50,13 +50,19 @@ h3{
   color: #3399d2;
   padding: 10px 10px 0 10px;
 }
-.panel-head{
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
 .panel p{
   margin: 0;
   color: #999;
+}
+.panel-head{
+  padding-left: 10px;
+  padding-top: -3px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  background: url(/images/icon_arrow.png) top left no-repeat;
+}
+.panel-head.open{
+  background: url(/images/icon_arrow_open.png) top left no-repeat;
 }
 .panel-content{
   margin: 0 -10px 0 -10px;
@@ -64,13 +70,11 @@ h3{
   color: #3399d2;
   display: none;
 }
-.active{
-  display: block;
-}
 .panel-content .details{
   padding: 5px;
   border-bottom: 1px solid #dae9f4;
   vertical-align: center;
+  margin-left: 15px;
 }
 .panel-content .details a {
   color: #5299d3;
@@ -86,6 +90,7 @@ h3{
 }
 .panel-content > a{
   width: 207px;
+  margin-left: 20px;
 }
 .container > a{
   width: 229px;

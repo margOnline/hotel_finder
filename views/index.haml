@@ -6,7 +6,7 @@
 - @destinations.each do |country, value|
   - value.each do |city, hotels|
     .panel
-      .panel-head
+      %div{class: "panel-head closed"}
         %h4 #{city}, #{country}
         %p Over #{hotels.count} hotels
       .panel-content
