@@ -1,0 +1,13 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :charset => "utf-8" }
+    %title= @title || 'Top Destination'
+    %link{ :rel => "stylesheet", :href => "/stylesheets/application.css" }
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+    %script{:src => "javascripts/script.js"}
+
+  %body
+    .container
+      = yield

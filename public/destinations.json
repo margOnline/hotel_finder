@@ -1,0 +1,116 @@
+{
+  "country": {
+    "United Kingdom" : {
+      "city" : {
+        "London" : {
+          "Radisson Edwardian Grafton Hotel" : {
+            "star_rating" : 2,
+            "former_price" : null,
+            "current_price" : 102,
+            "url" : "/"
+          },
+          "Grand Plaza Serviced Apartments" : {
+            "star_rating" : 3,
+            "former_price" : null,
+            "current_price" : 78,
+            "url" : "/"
+          },
+          "The May Fair" : {
+            "star_rating" : 4,
+            "former_price" : 232,
+            "current_price" : 192,
+            "url" : "/"
+          },
+          "The Rembrandt" : {
+            "star_rating" : 3,
+            "former_price" : 122,
+            "current_price" : 112,
+            "url" : "/"
+          },
+          "Lancaster Gate Hotel" : {
+            "star_rating" : 5,
+            "former_price" : 64,
+            "current_price" : 61,
+            "url" : "/"
+          }
+        }
+      }
+    },
+    "United States" : {
+      "state" : { 
+        "New York" : {
+          "city" : {
+            "New York" : {
+              "The Waldorf Astoria" : {
+                "star_rating" : 2,
+                "former_price" : null,
+                "current_price" : 154,
+                "url" : "/"
+              },
+              "Park Central New York Hotel" : {
+                "star_rating" : 5,
+                "former_price" : 121,
+                "current_price" : 89,
+                "url" : "/"
+              },
+              "Hilton Garden Inn New York/West 35th Street" : {
+                "star_rating" : 4,
+                "former_price" : null,
+                "current_price" : 74,
+                "url" : "/"
+              },
+              "Hilton New York" : {
+                "star_rating" : 3,
+                "former_price" : null,
+                "current_price" : 147,
+                "url" : "/"
+              },
+              "Hotel Pennsylvania" : {
+                "star_rating" : 4,
+                "former_price" : null,
+                "current_price" : 60,
+                "url" : "/"
+              }
+            }
+          }
+        }
+      }
+    },
+    "France" : {
+      "city" : {
+        "Paris" : {
+          "Sofitel Paris Le Faubourg" : {
+            "star_rating" : 5,
+            "former_price" : null,
+            "current_price" : 285,
+            "url" : "/"
+          },
+          "Pullman Paris Tour Eiffel" : {
+            "star_rating" : 4,
+            "former_price" : null,
+            "current_price" : 168,
+            "url" : "/"
+          },
+          "Champs Elysees Mac Mahon" : {
+            "star_rating" : 3,
+            "former_price" : null,
+            "current_price" : 192,
+            "url" : "/"
+          },
+          "Hotel Regina" : {
+            "star_rating" : 2,
+            "former_price" : null,
+            "current_price" : 159,
+            "url" : "/"
+          },
+          "Hotel Pershing Hall Paris" : {
+            "star_rating" : 4,
+            "former_price" : null,
+            "current_price" : 283,
+            "url" : "/"
+          }
+        }
+      }
+    }
+  }
+}
