@@ -16,7 +16,7 @@ class Parser
       value.each do |k, v|
         v.each do |city, hotels| 
           hotels.each do |hotel, attributes|
-            dest = Destination.new
+            dest = Hotel.new
             dest.name = hotel
             dest.city = city
             dest.country = key
@@ -29,6 +29,7 @@ class Parser
     sort(destinations)
   end
 
+  private
   def sort(array)
     hash = {}
     array.each do |x|

@@ -5,7 +5,7 @@ require 'haml'
 require 'json'
 require './top_destinations'
 require './lib/parsers/parser'
-require './lib/models/destination'
+require './lib/models/hotel'
 
 set :environment, :development
 set :run, false

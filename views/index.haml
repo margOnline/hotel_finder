@@ -7,7 +7,9 @@
   - value.each do |city, hotels|
     .panel
       %div{class: "panel-head closed"}
-        %h4 #{city}, #{country}
+        %h4 
+          %span.icon-arrow
+          %span #{city}, #{country}
         %p Over #{hotels.count} hotels
       .panel-content
         - hotels.each do |hotel|
@@ -16,10 +18,13 @@
               =hotel.name
             .meta
               %span.rating=hotel.rating
+              %span.star
               %span.text From    
               - if hotel.previous_price
                 %span.prev-price &pound;#{hotel.previous_price}
               %span.current-price &pound;#{hotel.current_price} 
         %a{href: "#"} See all 898 hotels in London
-
-%a{href: "/"}See all of our destination offers
+        %span.icon-arrow-right
+.offer-text
+  %a{href: "/"}See all of our destination offers
+  %span.icon-arrow-right

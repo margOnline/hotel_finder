@@ -25,6 +25,7 @@ h3{
 .strapline{
   font-size: 1.25em;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 .strapline span{
   border-bottom: 3px solid red;
@@ -51,7 +52,7 @@ h3{
   padding: 10px 10px 0 10px;
 }
 .panel p{
-  margin: 0;
+  margin: 0 0 0 15px;
   color: #999;
 }
 .panel-head{
@@ -59,11 +60,8 @@ h3{
   padding-top: -3px;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  background: url(/images/icon_arrow.png) top left no-repeat;
 }
-.panel-head.open{
-  background: url(/images/icon_arrow_open.png) top left no-repeat;
-}
+
 .panel-content{
   margin: 0 -10px 0 -10px;
   background-color: #fff;
@@ -78,23 +76,17 @@ h3{
 }
 .panel-content .details a {
   color: #5299d3;
+  margin-left: 15px;
 }
-.panel-content > a, .container > a{
+.panel-content > a, .offer-text a{
   display: inline-block;
-  width: 235px;
   font-weight: bold;
   margin: 10px 5px;
   color: #3399d2;
   font-size: 14px;
-  background: url(/images/icon_arrow_right.png) center right no-repeat;
 }
 .panel-content > a{
-  width: 207px;
   margin-left: 20px;
-}
-.container > a{
-  width: 229px;
-  float: right;
 }
 .meta{
   float: right;
@@ -102,8 +94,6 @@ h3{
 .rating{
   display: inline-block;
   font-size: 14px;
-  width: 25px;
-  background: url(/images/star.png) 11px 3px no-repeat;
 }
 .text{
   display: inline-block;
@@ -118,3 +108,18 @@ h3{
   color: #00B000;
   font-weight: strong;
 }
+.offer-text{
+  float: right;
+}
+.icon-arrow-right, .icon-arrow, .icon-arrow-open, .star{ 
+  display: inline-block; 
+  background: url('../images/icon_sprite.png') 
+  no-repeat; 
+  overflow: hidden; 
+  text-indent: -9999px; text-align: left; 
+}
+ 
+.icon-arrow-right { background-position: -0px -0px; width: 15px; height: 10px; }
+.icon-arrow { background-position: -0px -10px; width: 10px; height: 10px; }
+.icon-arrow-open { background-position: -0px -20px; width: 10px; height: 10px; }
+.star { background-position: -0px -30px; width: 10px; height: 10px; }
